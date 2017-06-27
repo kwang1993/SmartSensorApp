@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SmartSensor</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="TempTVLabel">Temperature</string>
+    <string name="RelHumTVLabel">Relative Humidity</string>
+    <string name="AirPressureTVLabel">Air Pressure</string>
+    <string name="BatVoltTVLabel">Battery Voltage</string>
+    <string name="UVTVLabel">UltraViolet</string>
+    <string name="PMTVLabel">PM2.5</string>
+    <string name="AirQualTVLabel">Air Quality</string>
+    <string name="GeoLocTVLabel">Location</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="list_of_data">
+        <item>Temperature</item>
+        <item>Temp BMP</item>
+        <item>Temp Node</item>
+        <item>Relative Humidity</item>
+        <item>PM1</item>
+        <item>PM2.5</item>
+        <item>PM10</item>
+        <item>UltraViolet</item>
+        <item>Formaldehyde</item>
+        <item>Battery Voltage</item>
+        <item>Raw Battery Voltage</item>
+        <item>Air Pressure</item>
+    </string-array>
+</resources>
