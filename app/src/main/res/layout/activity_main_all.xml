@@ -59,8 +59,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="Date"
+                    android:layout_margin="10dp"
+                    android:text="@string/loading"
                     android:ems="10"
                     android:id="@+id/dateTV"
                     android:layout_alignParentBottom="true"
@@ -83,7 +83,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/TempTVLabel"
@@ -104,7 +104,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -124,7 +124,7 @@
                     android:textColor="@android:color/black"/>
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/PMTV"
@@ -145,7 +145,7 @@
                     android:textColor="@android:color/black"/>
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -177,7 +177,7 @@
                     android:layout_marginTop="14dp" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -197,7 +197,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/AirQualTV"
@@ -216,7 +216,7 @@
                     android:textColor="@android:color/black"/>
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/GeoLocTV"
@@ -257,7 +257,7 @@
                     android:textColor="@android:color/black" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -277,7 +277,7 @@
                     android:textColor="@android:color/black"/>
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/statetv"
@@ -308,7 +308,7 @@
                     android:textColor="@android:color/black"/>
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rbvTVLabel"
@@ -317,7 +317,7 @@
                     android:id="@+id/rbvtv" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tempnodetv"
@@ -337,7 +337,7 @@
                     android:layout_marginBottom="293dp"/>
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/pm1tv"
@@ -346,7 +346,7 @@
                     android:layout_alignStart="@+id/PMTVLabel" />
 
                 <TextView
-                    android:text="Loading..."
+                    android:text="@string/loading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/RelHumTV"

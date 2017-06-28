@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -87,10 +88,6 @@ public class PlotActivity extends AppCompatActivity
         getPastData(dataType);
     }
 
-    public void onClicked(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
 
     public void getPastData(String s){
         if (s != null && !s.equals(""))
@@ -118,6 +115,7 @@ public class PlotActivity extends AppCompatActivity
                 TextView xaxis = (TextView) findViewById(R.id.xlabel);
                 TextView yaxis = (TextView) findViewById(R.id.ylabel);
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    Log.i("temp", child.toString());
                     //long date = child.getValue(Long.class);
                     double PM = child.child("PM").getValue(int.class);
                     double PM1 = child.child("PM1").getValue(int.class);
@@ -134,6 +132,9 @@ public class PlotActivity extends AppCompatActivity
                     double temperature_DS3231 = child.child("temperature_DS3231").getValue(double.class);
                     double uv = child.child("ultraviolet").getValue(int.class);
                     String date2 = child.getKey();
+
+
+
 
                     Data d = new Data(PM, PM1, PM10, battery_voltage, formaldehyde, humidity,
                             location, pressure, rbv, state, temperature, temperature_BMP, temperature_DS3231,

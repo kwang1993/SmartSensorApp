@@ -210,8 +210,10 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(this, "No settings available.", Toast.LENGTH_SHORT).show();
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -248,6 +250,7 @@ public class MainActivity extends AppCompatActivity
                 intent = new Intent(this, AboutActivity.class);
                 startActivity(intent);
                 break;
+
         }
     }
 }

@@ -38,342 +38,202 @@
 
             </android.support.design.widget.AppBarLayout>
 
-            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:orientation="vertical" android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
 
-            <TextView
-                android:text="Temperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:id="@+id/textView3"
-                android:textColor="@android:color/black" />
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="Past 12 hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewHistory"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/titleTextSize"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:layout_gravity="center_horizontal"/>
 
-            <android.support.design.widget.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
-                android:clickable="true"
-                android:src="@drawable/ic_tick"
-                android:onClick="onClicked"
-                app:borderWidth="0dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"/>
+                    <TextView
+                        android:text="Temperature (°C)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewTemperature"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewTemperatureLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/textView3"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/textView17"
-                android:layout_toRightOf="@+id/textView3"
-                android:layout_toEndOf="@+id/textView3"
-                android:layout_above="@+id/textView18"
-                android:gravity="right"
-                android:textAlignment="gravity"/>
+                    <TextView
+                        android:text="Temp BMP (°C)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewTempBMP"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewTempBMPLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView18"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView4"
-                android:layout_toEndOf="@+id/textView4"
-                android:layout_alignTop="@+id/textView4"
-                android:layout_above="@+id/textView19"
-                android:gravity="right"
-                android:textAlignment="gravity"/>
+                    <TextView
+                        android:text="Temp Node (°C)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewTempNode"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewTempNodeLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView19"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView5"
-                android:layout_toEndOf="@+id/textView5"
-                android:layout_alignTop="@+id/textView5"
-                android:layout_above="@+id/textView20"
-                android:gravity="right"
-                android:textAlignment="gravity"/>
+                    <TextView
+                        android:text="Relative Humidity (%)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewRelativeHumidity"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewRelativeHumidityLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView20"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView6"
-                android:layout_toEndOf="@+id/textView6"
-                android:layout_alignTop="@+id/textView6"
-                android:layout_above="@+id/textView21"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                    <TextView
+                        android:text="PM1 (µg/m³)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewPM1"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewPM1Loading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView21"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView7"
-                android:layout_toEndOf="@+id/textView7"
-                android:layout_above="@+id/textView22"
-                android:layout_alignTop="@+id/textView7"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                    <TextView
+                        android:text="PM2.5 (µg/m³)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewPM25"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewPM25Loading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView22"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView8"
-                android:layout_toEndOf="@+id/textView8"
-                android:layout_above="@+id/textView23"
-                android:layout_alignTop="@+id/textView8"
-                android:gravity="right"
-                android:textAlignment="gravity"/>
+                    <TextView
+                        android:text="PM10 (µg/m³)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewPM10"
+                        android:textColor="@android:color/black"/>
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewPM10Loading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView23"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView9"
-                android:layout_toEndOf="@+id/textView9"
-                android:layout_above="@+id/textView24"
-                android:layout_alignTop="@+id/textView9"
-                android:gravity="right"
-                android:textAlignment="gravity"/>
+                    <TextView
+                        android:text="UltraViolet (mV)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewUltraViolet"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewUltraVioletLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView24"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView10"
-                android:layout_toEndOf="@+id/textView10"
-                android:layout_above="@+id/textView25"
-                android:layout_alignTop="@+id/textView10"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                    <TextView
+                        android:text="Formaldehyde (µg/m³)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewFormaldehyde"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewFormaldehydeLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView25"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView11"
-                android:layout_toEndOf="@+id/textView11"
-                android:layout_above="@+id/textView26"
-                android:layout_alignTop="@+id/textView11"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                    <TextView
+                        android:text="Battery Voltage (mV)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewBatteryVoltage"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewBatteryVoltageLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView27"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView13"
-                android:layout_toEndOf="@+id/textView13"
-                android:layout_above="@+id/textView2"
-                android:layout_alignTop="@+id/textView13"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                    <TextView
+                        android:text="Raw Battery Voltage (mV)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewRawBatteryVoltage"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewRawBatteryVoltageLoading" />
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView26"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView12"
-                android:layout_toEndOf="@+id/textView12"
-                android:layout_above="@+id/textView27"
-                android:layout_alignTop="@+id/textView12"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                    <TextView
+                        android:text="Air Pressure (hPa)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewAirPressure"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:text="@string/loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginLeft"
+                        android:layout_marginBottom="@dimen/marginBottom"
+                        android:id="@+id/textViewAirPressureLoading"/>
 
-            <TextView
-                android:text="Loading..."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_toRightOf="@+id/textView16"
-                android:layout_toEndOf="@+id/textView16"
-                android:layout_alignTop="@+id/textView16"
-                android:layout_alignParentBottom="true"
-                android:gravity="right"
-                android:textAlignment="gravity" />
+                </LinearLayout>
+            </ScrollView>
 
-            <TextView
-                android:text="Raw Battery Voltage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView13"
-                android:layout_marginTop="18dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView12"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="Relative Humidity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView6"
-                android:layout_marginTop="19dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView5"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="Temp BMP"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView4"
-                android:layout_marginTop="20dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView3"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="Temp Node"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView5"
-                android:layout_marginTop="19dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView4"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="PM2.5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView8"
-                android:layout_marginTop="18dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView7"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/textView23"
-                android:layout_toStartOf="@+id/textView23" />
-
-            <TextView
-                android:text="UltraViolet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView10"
-                android:layout_marginTop="19dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView9"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="Formaldehyde"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView11"
-                android:layout_marginTop="19dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView10"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="Battery Voltage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView12"
-                android:layout_marginTop="16dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView11"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="Air Pressure"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView16"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="18dp"
-                android:layout_below="@+id/textView13"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <TextView
-                android:text="PM10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView9"
-                android:textColor="@android:color/black"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/textView8"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/textView24"
-                android:layout_toStartOf="@+id/textView24" />
-
-            <TextView
-                android:text="PM1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView7"
-                android:layout_marginTop="17dp"
-                android:textColor="@android:color/black"
-                android:layout_below="@+id/textView6"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/textView22"
-                android:layout_toStartOf="@+id/textView22" />
-
-            <TextView
-                android:text="Past 12 hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView28"
-                android:textColor="@android:color/black"
-                android:textSize="14sp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_above="@+id/textView17"/>
-            </RelativeLayout>
 
         </android.support.design.widget.CoordinatorLayout>
 

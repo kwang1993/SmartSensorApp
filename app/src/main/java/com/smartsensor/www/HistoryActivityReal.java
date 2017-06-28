@@ -112,18 +112,18 @@ public class HistoryActivityReal extends AppCompatActivity
 
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
     private void fillData(Data d, Data max, Data min) {
-        final TextView temp = (TextView) findViewById(R.id.textView17);
-        final TextView tempbmptv = (TextView) findViewById(R.id.textView18);
-        final TextView tempnodetv = (TextView) findViewById(R.id.textView19);
-        final TextView RelHumTV = (TextView) findViewById(R.id.textView20);
-        final TextView pm1tv = (TextView) findViewById(R.id.textView21);
-        final TextView pm25tv = (TextView) findViewById(R.id.textView22);
-        final TextView pm10tv = (TextView) findViewById(R.id.textView23);
-        final TextView UVTV = (TextView) findViewById(R.id.textView24);
-        final TextView fermaldehyde = (TextView) findViewById(R.id.textView25);
-        final TextView BatVoltTV = (TextView) findViewById(R.id.textView26);
-        final TextView rbvtv = (TextView) findViewById(R.id.textView27);
-        final TextView AirPressureTV = (TextView) findViewById(R.id.textView2);
+        final TextView temp = (TextView) findViewById(R.id.textViewTemperatureLoading);
+        final TextView tempbmptv = (TextView) findViewById(R.id.textViewTempBMPLoading);
+        final TextView tempnodetv = (TextView) findViewById(R.id.textViewTempNodeLoading);
+        final TextView RelHumTV = (TextView) findViewById(R.id.textViewRelativeHumidityLoading);
+        final TextView pm1tv = (TextView) findViewById(R.id.textViewPM1Loading);
+        final TextView pm25tv = (TextView) findViewById(R.id.textViewPM25Loading);
+        final TextView pm10tv = (TextView) findViewById(R.id.textViewPM10Loading);
+        final TextView UVTV = (TextView) findViewById(R.id.textViewUltraVioletLoading);
+        final TextView formaldehyde = (TextView) findViewById(R.id.textViewFormaldehydeLoading);
+        final TextView BatVoltTV = (TextView) findViewById(R.id.textViewBatteryVoltageLoading);
+        final TextView rbvtv = (TextView) findViewById(R.id.textViewRawBatteryVoltageLoading);
+        final TextView AirPressureTV = (TextView) findViewById(R.id.textViewAirPressureLoading);
 
         temp.setText("Mean: " + String.format( "%.2f", d.getTemperature()) + "  Max: " + String.format("%.2f", max.getTemperature()) + "  Min: " + String.format("%.2f", min.getTemperature()));
         tempbmptv.setText("Mean: " + String.format("%.2f", d.getTemperature_BMP()) + "  Max: " + String.format("%.2f", max.getTemperature_BMP()) + "  Min: " + String.format("%.2f", min.getTemperature_BMP()));
@@ -133,7 +133,7 @@ public class HistoryActivityReal extends AppCompatActivity
         pm25tv.setText("Mean: " + String.format("%.2f", d.getPM()) + "  Max: " + String.format("%.2f", max.getPM()) + "  Min: " + String.format("%.2f", min.getPM()));
         pm10tv.setText("Mean: " + String.format("%.2f", d.getPM10()) + "  Max: " + String.format("%.2f", max.getPM10()) + "  Min: " + String.format("%.2f", min.getPM10()));
         UVTV.setText("Mean: " + String.format("%.2f", d.getUltraviolet()) + "  Max: " + String.format("%.2f", max.getUltraviolet()) + "  Min: " + String.format("%.2f", min.getUltraviolet()));
-        fermaldehyde.setText("Mean: " + String.format("%.2f", d.getFormaldehyde()) + "  Max: " + String.format("%.2f", max.getFormaldehyde()) + "  Min: " + String.format("%.2f", min.getFormaldehyde()));
+        formaldehyde.setText("Mean: " + String.format("%.2f", d.getFormaldehyde()) + "  Max: " + String.format("%.2f", max.getFormaldehyde()) + "  Min: " + String.format("%.2f", min.getFormaldehyde()));
         BatVoltTV.setText("Mean: " + String.format("%.2f", d.getBattery_voltage()) + "  Max: " + String.format("%.2f", max.getBattery_voltage()) + "  Min: " + String.format("%.2f", min.getBattery_voltage()));
         rbvtv.setText("Mean: " + String.format("%.2f", d.getRaw_battery_voltage()) + "  Max: " + String.format("%.2f", max.getRaw_battery_voltage()) + "  Min: " + String.format("%.2f", min.getRaw_battery_voltage()));
         AirPressureTV.setText("Mean: " + String.format("%.2f", d.getPressure()) + "  Max: " + String.format("%.2f", max.getPressure()) + "  Min: " + String.format("%.2f", min.getPressure()));
