@@ -71,12 +71,14 @@ public class MainActivity extends AppCompatActivity
         // and move the map's camera to the same location.
         double lat = mLocation.getLat();
         double lng = mLocation.getLng();
-        //LatLng loc = new LatLng(34.06358337402344, -118.4521255493164);
-        LatLng loc = new LatLng(lat, lng);
-        googleMap.addMarker(new MarkerOptions().position(loc)
-                .title("Current Location"));
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
-        googleMap.moveCamera(CameraUpdateFactory.zoomTo(14));
+        if (lat != 0. && lng != 0.) {
+            //LatLng loc = new LatLng(34.06358337402344, -118.4521255493164);
+            LatLng loc = new LatLng(lat, lng);
+            googleMap.addMarker(new MarkerOptions().position(loc)
+                    .title("Current Location"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
+            googleMap.moveCamera(CameraUpdateFactory.zoomTo(14));
+        }
     }
 
 
