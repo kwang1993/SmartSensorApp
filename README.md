@@ -2,7 +2,7 @@
 
 This project aims at developing an environmental monitoring Android app with wireless sensors.
 
-# Team
+## Team
 Kaicheng Wang: server
 Yubin Xiao: Arduino and sensors
 Joe Fague: UI
